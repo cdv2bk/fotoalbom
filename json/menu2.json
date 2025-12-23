@@ -1,0 +1,18 @@
+{
+  "path" : "https://raw.githubusercontent.com/cdv2bk/fot/refs/heads/main/json/menu0.json",
+  "menu" : [
+    ""         , "https://raw.githubusercontent.com/cdv2bk/fot/refs/heads/main/json/1960-ert.json",
+    ""         , "https://raw.githubusercontent.com/cdv2bk/fot/refs/heads/main/json/1960-ert.json",
+    ""         , "https://raw.githubusercontent.com/cdv2bk/fot/refs/heads/main/json/1960-ert.json",
+    "1960-e"         , "https://raw.githubusercontent.com/cdv2bk/fot/refs/heads/main/json/1960-ert.json",
+    "1970-e"         , "https://raw.githubusercontent.com/cdv2bk/fot/refs/heads/main/json/1970-ert.json",
+    "1980-e"         , "https://raw.githubusercontent.com/cdv2bk/fot/refs/heads/main/json/menu1980.json",
+    "1990-e"         , "https://raw.githubusercontent.com/cdv2bk/fot/refs/heads/main/json/menu1990.json",
+    "2000-e"         , "https://raw.githubusercontent.com/cdv2bk/fot/refs/heads/main/json/menu2000.json",
+    "2010-e"         , "https://raw.githubusercontent.com/cdv2bk/fot/refs/heads/main/json/menu2010.json",
+    "2020-e"         , "https://raw.githubusercontent.com/cdv2bk/fot/refs/heads/main/json/menu2020.json",
+    "Разное"         , "https://raw.githubusercontent.com/cdv2bk/fot/refs/heads/main/json/menu_raz.json",
+    "Предыдущие"     , "https://raw.githubusercontent.com/cdv2bk/fot/refs/heads/main/json/menu_pre.json",
+    "Управление"     , "https://raw.githubusercontent.com/cdv2bk/fot/refs/heads/main/json/menu_upr.json"
+  ]
+}

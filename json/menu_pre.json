@@ -1,0 +1,12 @@
+{
+  "path" : "https://raw.githubusercontent.com/cdv2bk/fot/refs/heads/main/json/menu_pre.json",
+  "menu" : [
+    "1960-e"    , "https://raw.githubusercontent.com/cdv2bk/fot/refs/heads/main/json_of/1960-et.json",
+    "1970-e"    , "https://raw.githubusercontent.com/cdv2bk/fot/refs/heads/main/json_of/1970-et.json",
+    "1980-e"    , "https://raw.githubusercontent.com/cdv2bk/fot/refs/heads/main/json_of/menu1980-e.json",
+    "1990-e"    , "https://raw.githubusercontent.com/cdv2bk/fot/refs/heads/main/json_of/menu1990-e.json",
+    "2000-e"    , "https://raw.githubusercontent.com/cdv2bk/fot/refs/heads/main/json_of/menu2000-e.json",
+    "2010-e"    , "https://raw.githubusercontent.com/cdv2bk/fot/refs/heads/main/json_of/menu2010-e.json",
+    "2020-e"    , "https://raw.githubusercontent.com/cdv2bk/fot/refs/heads/main/json_of/menu2020-e.json"
+  ]
+}

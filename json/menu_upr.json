@@ -1,0 +1,14 @@
+{
+  "path" : "https://raw.githubusercontent.com/cdv2bk/fot/refs/heads/main/json/menu_upr.json",
+  "menu" : [
+    "ВГФЭ_(_upr)"    , "https://raw.githubusercontent.com/cdv2bk/fot/refs/heads/main/json/vgfet.json",
+    "Щекино_(мин)"   , "https://raw.githubusercontent.com/cdv2bk/fot/refs/heads/main/json/shchekinot.json",
+    "Школьная1t"     , "https://raw.githubusercontent.com/cdv2bk/fot/refs/heads/main/json/shkolnaja1t.json",
+    "Воркута"        , "https://raw.githubusercontent.com/cdv2bk/fot/refs/heads/main/json/vorkuta.json",
+    "Воркута_2021"   , "https://raw.githubusercontent.com/cdv2bk/fot/refs/heads/main/json/vorkuta_2021.json",
+    "Воркута_2023"   , "https://raw.githubusercontent.com/cdv2bk/fot/refs/heads/main/json/vorkuta_2023.json",
+    "Воркута_2024"   , "https://raw.githubusercontent.com/cdv2bk/fot/refs/heads/main/json/vorkuta_2024.json",
+    "Воркута_ретро1" , "https://raw.githubusercontent.com/cdv2bk/fot/refs/heads/main/json/vorkuta_retro1.json",
+    "Воркута_ретро2" , "https://raw.githubusercontent.com/cdv2bk/fot/refs/heads/main/json/vorkuta_retro2.json"
+  ]
+}
