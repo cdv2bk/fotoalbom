@@ -2,7 +2,7 @@
 <html lang=ru>
  <head>
  <meta charset=utf-8>
- <title>Слайдшоу 2025-12-19</title>
+ <title>Слайдшоу 2025-12-23</title>
  <style>
   body {
     margin: 0;
@@ -217,6 +217,7 @@
    	 fot1.style.display = "none";
    } else {
      var ii = 0;
+     document.body.style.backgroundImage = 'none';
      for(ii=1; ii<aFil.length; ii+=2) {    // предварительно создать для загрузки каждого слайда свою миниатюру
        // alert(ii+" ii - ii-1 inner text "+adfo.children[ii-1].innerText);
        lf.innerHTML += '<img src="load1.jpg" width=200 alt="'+aFil[ii-1].innerText+'">';
