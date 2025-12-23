@@ -2,13 +2,42 @@
 <html lang=ru>
  <head>
  <meta charset=utf-8>
- <title>Слайдшоу 2025-12-13</title>
+ <title>Слайдшоу 2025-12-19</title>
  <style>
   body {
     margin: 0;
     background: #004f00;
+    background-image: url(img/book-10.jpg);
+    //background-size: 100% 100%;
+    background-size: cover;
+
     //overflow: hidden;
   }
+  #b1960 {
+     background: #00e0e0;
+     background-image: url(img/book1960.jpg);
+     background-size: 100%;
+     
+ }
+  .im {    // картинка книги 
+     background: #00e0e0;
+     background-image: url(img/book1960.jpg);
+     //background-repeat: no-repeat;
+     background-size: 100% 100%;
+ }
+  .lb {   // буквы на картинке книги    
+     background: #00e0e0;
+     font-size: 24px;
+     color: #b29571;
+     position: relative;
+     left: 22%;
+     top: 22%;
+ }
+ .tumba {
+ 	background-image: url(img/tumba30.jpg);
+ 	background-size: 100; auto;
+ 	background-position: 50% 0px;
+ }
   .sp3 { height: 9px; }
   #lf > img {
     width: 200px;
@@ -78,7 +107,7 @@
  var nsifo = 100;         // базовый размер фонта в пикселях для высоты экрана 1000 пикселей
  //var oldtop = 0;          // старый fot1.sfyle.top
  var nbsp = String.fromCharCode(160);
- shinstr();                                               // показ инструкции
+ // shinstr();                                               // показ инструкции
  window.onload = function() {
    document.addEventListener('keydown', function(event){
    //alert("Клавиша "+event.code+" - "+event.keyCode);
@@ -108,7 +137,7 @@
      }
 
      msnum.value = ms/1000;
-     setTimeout(shinstr, ms-100);
+     //setTimeout(shinstr, ms-100);
      //alert(decodeURIComponent(location.search.substring(1)));
      if(decodeURIComponent(location.search.substring(1))=="Припять__1инстр") {shinstr();}
      timsl = setTimeout(nextf, ms);
@@ -130,16 +159,60 @@
    var aFil = jsonObj["files1"];
    var oMenu = jsonObj["menu"];
    var sTmp1 =  decodeURIComponent(location.hash).substring(1);
+   var wh = window.innerHeight;
+   var ww = window.innerWidth; 
+   var nh = 0;
+   var nw = 0;
+   var np = 0;     // сколько пунктов меню поместится по высоте экрана
+   var np1 = 0;
+   var nhm = 50;   // высота пункта в меню
+   var nwm = 470;  // ширина пункта в меню
+   var nt = 0;
+   var sm = "";    // добавить пробелы если имя альбома меньше 21 символа
    sTmp1 = sTmp1.substring(sTmp1.lastIndexOf("/") + 1, sTmp1.lastIndexOf("/") + 5);
    //alert("sTmp1 : " + sTmp1);
    if( sTmp1 == "menu") {
-   	 //alert("oMenu.length : " + oMenu.length);
-   	 for(var ii=0; ii<oMenu.length; ii+=2) {
-   	   //sTmp1 = oMenu[ii+1];
-   	   sTmp1 = `<a class="bm" href=show3.htm?__` + oMenu[ii] + `__#__` + oMenu[ii+1] + ` target=_blank>&nbsp;&nbsp;` + oMenu[ii] +`&nbsp;&nbsp;</a><div class="sp3"> </div>`;
-   	   //alert("sTmp1 : " + sTmp1);
-   	   lf.innerHTML += sTmp1;
+   //alert("oMenu.length : " + oMenu.length);
+     np = Math.trunc((wh-20)/nhm);
+     nw = (ww/2)-(nwm/2)*(1+Math.trunc((oMenu.length/2)/np));
+     if(nw<0) {nw = 20;}
+     nh = (wh/2)-(nhm/2)*oMenu.length/2;
+     if(nh<0) {nh = 20;}
+     if(nhm*oMenu.length/2+20>wh) {nh=20;}
+   	 //alert("nw nh formula = " + nw + " " + nh + " " + np);
+   	 // 
+   	 if(oMenu.length/2 >= np) {
+   	 	nt = nh+np*nhm-55;
+   	 } else {
+   	 	nt = nh+nhm*oMenu.length/2 -55;
    	 }
+   	 sTmp1 = `</div><div class=tumba style="position:absolute; top:`+nt+`px; background-color: #ffffff;  width:100%; height:`+(wh-nt)+`px;"> </div>`;
+   	 //sTmp1 = "";   (nh+nhm*oMenu.length/2 -35)
+   	 sTmp1 += `<div style=" position:absolute; left:` + nw + `px; top:` + nh + `px;  white-space: nowrap; ">`;
+   	 for(var ii=0; ii<oMenu.length; ii+=2) {
+   	   if(np1>=np) {
+   	     if((oMenu.length-ii)/2 <= np) {
+   	       nh += nhm*(np-(oMenu.length/2-ii/2));       // добавить пустые места, что бы последняя стопка альбомов лежала внизу
+   	       //alert("(np-(oMenu.length/2-ii/2)) = "+(np-(oMenu.length/2-ii/2)));
+   	       }
+   	     nw += nwm;
+   	     sTmp1 += `</div><div style=" position:absolute; left:` + nw + `px; top:` + nh + `px;  white-space: nowrap; ">`;
+   	     np1=0;
+   	   }
+   	   sTmp1 += `<a href=show3.htm?__` + oMenu[ii] + `__#__` + oMenu[ii+1] + ` target=_blank>`;
+   	   //sTmp1 += `<div class="im" style="hight:`+nhm+`px;"><b class="lb">&nbsp;` + oMenu[ii] + `</b></div></a>`;
+   	   //sTmp1 += `<div class="im"  style="height:70px; width:380px; background-color: #ffffff;"><b class="lb">&nbsp;` + oMenu[ii] + `</b></div></a>`;
+   	   sm = "";
+   	   if(oMenu[ii].length < 21) {
+   	   	 for(var iii=0; iii <= 1.5*(21-oMenu[ii].length)/2; iii++) { sm += "&nbsp"; }
+   	   }
+   	   sm += oMenu[ii];
+   	   sTmp1 += `<div class="im"  style="height:`+nhm+`px; width:`+nwm+`px; background-color: #ffffff;"><b class="lb">&nbsp;` + sm + `</b></div></a>`;
+   	   np1 += 1;
+   	   //alert("sTmp1 : " + sTmp1);
+   	 }
+   	 
+   	 lf.innerHTML = sTmp1;
    	 lf.style.display = "block";
    	 fot1.style.display = "none";
    } else {
