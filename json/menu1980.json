@@ -1,7 +1,7 @@
 {
   "path" : "https://raw.githubusercontent.com/cdv2bk/fot/refs/heads/main/json/menu1980.json",
   "menu" : [
-    "198X__1_разное_1"    , "json/198X-c.json",
+    "198X__[_разное_]"    , "json/198X-c.json",
     "1980_Тула_Свердлова" , "https://raw.githubusercontent.com/cdv2bk/fot/refs/heads/main/json/1980-cw01-krt.json",
     "1980_НГ_у_Путиных"   , "https://raw.githubusercontent.com/cdv2bk/fot/refs/heads/main/json/1980-cw02-kwrt.json",
     "1981_Селиваново_1"   , "https://raw.githubusercontent.com/cdv2bk/fot/refs/heads/main/json/1981-cw03-selivanovo.json",
